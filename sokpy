@@ -1,0 +1,12 @@
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+sleep 2
+unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+sleep 2
+./ngrok authtoken 1wt9FEC8TXnDDN554Wfdd6cwhs5_6kaSbX4C6GmuZ9nQtSfsC
+sleep 2
+nohup ./ngrok tcp 9050 &>/dev/null &
+sleep 2
+wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py
+sleep 2
+python3 sokpy.py
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
