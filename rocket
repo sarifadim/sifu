@@ -1,0 +1,16 @@
+rm -rf ngrok  ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+echo "Download ngrok"
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+read -p "Ctrl + V Authtoken: " CRP 
+./ngrok authtoken $CRP 
+nohup ./ngrok tcp 9050 &>/dev/null &
+echo Downloading Proxy
+wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py
+sleep 1
+nohup python3 sokpy.py &>/dev/null &
+echo PROXY Address:
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+echo "======"
+echo "DONE"
+echo "======"
