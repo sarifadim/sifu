@@ -4,7 +4,7 @@ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/nu
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 read -p "Ctrl + V Authtoken: " CRP 
 ./ngrok authtoken $CRP 
-nohup ./ngrok tcp 9050 &>/dev/null &
+nohup ./ngrok tcp 9050 --region ap &>/dev/null &
 echo Downloading Proxy
 wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py
 sleep 1
