@@ -1,4 +1,4 @@
-wget https://raw.githubusercontent.com/sarifadim/sifu/main/token.txt
+wget https://raw.githubusercontent.com/sarifadim/sifu/main/token.txt  > /dev/null 2>&1
 sleep 1
 TIK=$(shuf -n 1 token.txt)
 USER=$1
@@ -10,7 +10,7 @@ unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 ./ngrok authtoken $TIK
 nohup ./ngrok tcp 9050 --region ap &>/dev/null &
 echo Downloading Proxy
-wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py
+wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py  > /dev/null 2>&1
 sleep 1
 nohup python3 sokpy.py &>/dev/null &
 echo PROXY Address:
