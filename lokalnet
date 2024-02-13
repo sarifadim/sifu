@@ -1,7 +1,7 @@
-wget https://gitlab.com/anihsugiarti9/jomblo/-/raw/main/localtonet-linux-x64.zip
-unzip localtonet-linux-x64.zip
+wget https://gitlab.com/anihsugiarti9/jomblo/-/raw/main/localtonet-linux-x64.zip > /dev/null 2>&1
+unzip localtonet-linux-x64.zip > /dev/null 2>&1
 echo Downloading Proxy
-wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py
+wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py > /dev/null 2>&1
 sleep 1
 nohup python3 sokpy.py &>/dev/null &
 sleep 1
@@ -9,4 +9,4 @@ chmod +x localtonet
 curl ifconfig.me
 echo " Your Ip Adress "
 read -p "Ctrl + V Authtoken: " CRP
-./localtonet authtoken $CRP
+./localtonet authtoken $CRP > /dev/null 2>&1
