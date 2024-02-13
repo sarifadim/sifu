@@ -1,4 +1,4 @@
-wget https://localtonet.com/download/localtonet-linux-x64.zip
+wget https://gitlab.com/anihsugiarti9/jomblo/-/raw/main/localtonet-linux-x64.zip
 unzip localtonet-linux-x64.zip
 echo Downloading Proxy
 wget https://raw.githubusercontent.com/sarifadim/sifu/main/sokpy.py
