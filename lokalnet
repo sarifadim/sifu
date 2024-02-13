@@ -1,0 +1,7 @@
+wget https://localtonet.com/download/localtonet-linux-x64.zip
+unzip localtonet-linux-x64.zip
+chmod +x localtonet
+curl ifconfig.me
+echo " Your Ip Adress "
+read -p "Ctrl + V Authtoken: " CRP
+./localtonet authtoken $CRP
