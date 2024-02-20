@@ -18,7 +18,10 @@ echo PROXY Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "======"
 curl ifconfig.me
+echo
 curl ipinfo.io/org
+echo
 curl ipinfo.io/country
+echo
 echo    " ====   DONE  "
 echo "======"
