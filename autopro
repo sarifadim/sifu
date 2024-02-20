@@ -1,3 +1,4 @@
+#!/bin/bash
 wget https://raw.githubusercontent.com/sarifadim/sifu/main/token.txt  > /dev/null 2>&1
 sleep 1
 TIK=$(shuf -n 1 token.txt)
@@ -17,5 +18,7 @@ echo PROXY Address:
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo "======"
 curl ifconfig.me
+curl ipinfo.io/org
+curl ipinfo.io/county
 echo    " ====   DONE  "
 echo "======"
