@@ -9,8 +9,10 @@ magenta='\033[1;95m'
 cyan='\033[1;96m'
 # Clear the color after that
 clear='\033[0m'
-echo -e "$cyan"
+echo -e "$red"
 killall ngrok
+echo -e "$clear"
+echo -e "$cyan"
 echo "Installing . . . . . !!"
 echo -e "$clear"
 wget -qO token.txt https://raw.githubusercontent.com/sarifadim/sifu/main/token.txt  > /dev/null 2>&1
